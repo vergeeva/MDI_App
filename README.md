@@ -2,7 +2,7 @@
 Проект для видео на ютубе https://youtu.be/jTI2y0lPj7E
 
 ### Открытие дочерней формы из материнской:
-> Form childForm = new Акты(this); <br>
+> Form childForm = new Имя_открываемой_формы(this); <br>
 > childForm.MdiParent = this; <br>
 > childForm.Show(); <br>
 
