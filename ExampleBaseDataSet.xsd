@@ -1,0 +1,343 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="ExampleBaseDataSet" targetNamespace="http://tempuri.org/ExampleBaseDataSet.xsd" xmlns:mstns="http://tempuri.org/ExampleBaseDataSet.xsd" xmlns="http://tempuri.org/ExampleBaseDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" GeneratorFunctionsComponentClassName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" UserFunctionsComponentName="QueriesTableAdapter" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="ExampleBaseConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="ExampleBaseConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.WindowsFormsApp1.Properties.Settings.GlobalReference.Default.ExampleBaseConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="View_АктыTableAdapter" GeneratorDataComponentClassName="View_АктыTableAdapter" Name="View_Акты" UserDataComponentName="View_АктыTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ExampleBaseConnectionString (Settings)" DbObjectName="ExampleBase.dbo.View_Акты" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT Код_акта, Код_материала, Наименование, Получатель, Первоначальная_стоимость, Фактический_износ FROM dbo.View_Акты</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Код_акта" DataSetColumn="Код_акта" />
+              <Mapping SourceColumn="Код_материала" DataSetColumn="Код_материала" />
+              <Mapping SourceColumn="Наименование" DataSetColumn="Наименование" />
+              <Mapping SourceColumn="Получатель" DataSetColumn="Получатель" />
+              <Mapping SourceColumn="Первоначальная_стоимость" DataSetColumn="Первоначальная_стоимость" />
+              <Mapping SourceColumn="Фактический_износ" DataSetColumn="Фактический_износ" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="View_ВедомостьTableAdapter" GeneratorDataComponentClassName="View_ВедомостьTableAdapter" Name="View_Ведомость" UserDataComponentName="View_ВедомостьTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ExampleBaseConnectionString (Settings)" DbObjectName="ExampleBase.dbo.View_Ведомость" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT Код_марки, Наименование, Первоначальная_стоимость, Фактический_износ, Плановый_износ, Сумма_отчислений_факт, Сумма_отчислений_план, Отклонение FROM dbo.View_Ведомость</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Код_марки" DataSetColumn="Код_марки" />
+              <Mapping SourceColumn="Наименование" DataSetColumn="Наименование" />
+              <Mapping SourceColumn="Первоначальная_стоимость" DataSetColumn="Первоначальная_стоимость" />
+              <Mapping SourceColumn="Фактический_износ" DataSetColumn="Фактический_износ" />
+              <Mapping SourceColumn="Плановый_износ" DataSetColumn="Плановый_износ" />
+              <Mapping SourceColumn="Сумма_отчислений_факт" DataSetColumn="Сумма_отчислений_факт" />
+              <Mapping SourceColumn="Сумма_отчислений_план" DataSetColumn="Сумма_отчислений_план" />
+              <Mapping SourceColumn="Отклонение" DataSetColumn="Отклонение" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="View_МатериалыTableAdapter" GeneratorDataComponentClassName="View_МатериалыTableAdapter" Name="View_Материалы" UserDataComponentName="View_МатериалыTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ExampleBaseConnectionString (Settings)" DbObjectName="ExampleBase.dbo.View_Материалы" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT Код_марки, Наименование FROM dbo.View_Материалы</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Код_марки" DataSetColumn="Код_марки" />
+              <Mapping SourceColumn="Наименование" DataSetColumn="Наименование" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="View_ПланTableAdapter" GeneratorDataComponentClassName="View_ПланTableAdapter" Name="View_План" UserDataComponentName="View_ПланTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ExampleBaseConnectionString (Settings)" DbObjectName="ExampleBase.dbo.View_План" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT Код_плана, Код_материала, Наименование, Плановый_износ FROM dbo.View_План</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Код_плана" DataSetColumn="Код_плана" />
+              <Mapping SourceColumn="Код_материала" DataSetColumn="Код_материала" />
+              <Mapping SourceColumn="Наименование" DataSetColumn="Наименование" />
+              <Mapping SourceColumn="Плановый_износ" DataSetColumn="Плановый_износ" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="View_РасчетСуммыАмортОтчисленийTableAdapter" GeneratorDataComponentClassName="View_РасчетСуммыАмортОтчисленийTableAdapter" Name="View_РасчетСуммыАмортОтчислений" UserDataComponentName="View_РасчетСуммыАмортОтчисленийTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ExampleBaseConnectionString (Settings)" DbObjectName="ExampleBase.dbo.View_РасчетСуммыАмортОтчислений" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT Код_марки, Наименование, Первоначальная_стоимость, Фактический_износ, Сумма_отчислений_факт FROM dbo.View_РасчетСуммыАмортОтчислений</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Код_марки" DataSetColumn="Код_марки" />
+              <Mapping SourceColumn="Наименование" DataSetColumn="Наименование" />
+              <Mapping SourceColumn="Первоначальная_стоимость" DataSetColumn="Первоначальная_стоимость" />
+              <Mapping SourceColumn="Фактический_износ" DataSetColumn="Фактический_износ" />
+              <Mapping SourceColumn="Сумма_отчислений_факт" DataSetColumn="Сумма_отчислений_факт" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources>
+          <DbSource ConnectionRef="ExampleBaseConnectionString (Settings)" DbObjectName="ExampleBase.dbo.Delete_Акт" DbObjectType="StoredProcedure" GenerateShortCommands="true" GeneratorSourceName="Delete_Акт" MethodsParameterType="CLR" Modifier="Public" Name="Delete_Акт" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="Delete_Акт">
+            <SelectCommand>
+              <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
+                <CommandText>dbo.Delete_Акт</CommandText>
+                <Parameters>
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="ReturnValue" ParameterName="@RETURN_VALUE" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@IdAct" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                </Parameters>
+              </DbCommand>
+            </SelectCommand>
+          </DbSource>
+          <DbSource ConnectionRef="ExampleBaseConnectionString (Settings)" DbObjectName="ExampleBase.dbo.Delete_Материал" DbObjectType="StoredProcedure" GenerateShortCommands="true" GeneratorSourceName="Delete_Материал" MethodsParameterType="CLR" Modifier="Public" Name="Delete_Материал" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="Delete_Материал">
+            <SelectCommand>
+              <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
+                <CommandText>dbo.Delete_Материал</CommandText>
+                <Parameters>
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="ReturnValue" ParameterName="@RETURN_VALUE" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@IdMaterial" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                </Parameters>
+              </DbCommand>
+            </SelectCommand>
+          </DbSource>
+          <DbSource ConnectionRef="ExampleBaseConnectionString (Settings)" DbObjectName="ExampleBase.dbo.Delete_План" DbObjectType="StoredProcedure" GenerateShortCommands="true" GeneratorSourceName="Delete_План" MethodsParameterType="CLR" Modifier="Public" Name="Delete_План" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy2" UserSourceName="Delete_План">
+            <SelectCommand>
+              <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
+                <CommandText>dbo.Delete_План</CommandText>
+                <Parameters>
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="ReturnValue" ParameterName="@RETURN_VALUE" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@IdPlan" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                </Parameters>
+              </DbCommand>
+            </SelectCommand>
+          </DbSource>
+          <DbSource ConnectionRef="ExampleBaseConnectionString (Settings)" DbObjectName="ExampleBase.dbo.Insert_Акт" DbObjectType="StoredProcedure" GenerateShortCommands="true" GeneratorSourceName="Insert_Акт" MethodsParameterType="CLR" Modifier="Public" Name="Insert_Акт" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy3" UserSourceName="Insert_Акт">
+            <SelectCommand>
+              <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
+                <CommandText>dbo.Insert_Акт</CommandText>
+                <Parameters>
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="ReturnValue" ParameterName="@RETURN_VALUE" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@IdMaterial" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@Recipient" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="float" DbType="Double" Direction="Input" ParameterName="@StartCost" Precision="53" ProviderType="Float" Scale="0" Size="8" SourceColumnNullMapping="false" SourceVersion="Current" />
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="float" DbType="Double" Direction="Input" ParameterName="@Fact" Precision="53" ProviderType="Float" Scale="0" Size="8" SourceColumnNullMapping="false" SourceVersion="Current" />
+                </Parameters>
+              </DbCommand>
+            </SelectCommand>
+          </DbSource>
+          <DbSource ConnectionRef="ExampleBaseConnectionString (Settings)" DbObjectName="ExampleBase.dbo.Insert_Материал" DbObjectType="StoredProcedure" GenerateShortCommands="true" GeneratorSourceName="Insert_Материал" MethodsParameterType="CLR" Modifier="Public" Name="Insert_Материал" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy4" UserSourceName="Insert_Материал">
+            <SelectCommand>
+              <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
+                <CommandText>dbo.Insert_Материал</CommandText>
+                <Parameters>
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="ReturnValue" ParameterName="@RETURN_VALUE" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="varchar" DbType="AnsiString" Direction="Input" ParameterName="@Name" Precision="0" ProviderType="VarChar" Scale="0" Size="50" SourceColumnNullMapping="false" SourceVersion="Current" />
+                </Parameters>
+              </DbCommand>
+            </SelectCommand>
+          </DbSource>
+          <DbSource ConnectionRef="ExampleBaseConnectionString (Settings)" DbObjectName="ExampleBase.dbo.Insert_План" DbObjectType="StoredProcedure" GenerateShortCommands="true" GeneratorSourceName="Insert_План" MethodsParameterType="CLR" Modifier="Public" Name="Insert_План" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy5" UserSourceName="Insert_План">
+            <SelectCommand>
+              <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
+                <CommandText>dbo.Insert_План</CommandText>
+                <Parameters>
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="ReturnValue" ParameterName="@RETURN_VALUE" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@IdMaterial" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="float" DbType="Double" Direction="Input" ParameterName="@Plan" Precision="53" ProviderType="Float" Scale="0" Size="8" SourceColumnNullMapping="false" SourceVersion="Current" />
+                </Parameters>
+              </DbCommand>
+            </SelectCommand>
+          </DbSource>
+          <DbSource ConnectionRef="ExampleBaseConnectionString (Settings)" DbObjectName="ExampleBase.dbo.Update_Акт" DbObjectType="StoredProcedure" GenerateShortCommands="true" GeneratorSourceName="Update_Акт" MethodsParameterType="CLR" Modifier="Public" Name="Update_Акт" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy6" UserSourceName="Update_Акт">
+            <SelectCommand>
+              <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
+                <CommandText>dbo.Update_Акт</CommandText>
+                <Parameters>
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="ReturnValue" ParameterName="@RETURN_VALUE" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@IdAct" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@IdMaterial" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@Recipient" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="float" DbType="Double" Direction="Input" ParameterName="@StartCost" Precision="53" ProviderType="Float" Scale="0" Size="8" SourceColumnNullMapping="false" SourceVersion="Current" />
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="float" DbType="Double" Direction="Input" ParameterName="@Fact" Precision="53" ProviderType="Float" Scale="0" Size="8" SourceColumnNullMapping="false" SourceVersion="Current" />
+                </Parameters>
+              </DbCommand>
+            </SelectCommand>
+          </DbSource>
+          <DbSource ConnectionRef="ExampleBaseConnectionString (Settings)" DbObjectName="ExampleBase.dbo.Update_Материал" DbObjectType="StoredProcedure" GenerateShortCommands="true" GeneratorSourceName="Update_Материал" MethodsParameterType="CLR" Modifier="Public" Name="Update_Материал" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy7" UserSourceName="Update_Материал">
+            <SelectCommand>
+              <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
+                <CommandText>dbo.Update_Материал</CommandText>
+                <Parameters>
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="ReturnValue" ParameterName="@RETURN_VALUE" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@IdMaterial" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="varchar" DbType="AnsiString" Direction="Input" ParameterName="@Name" Precision="0" ProviderType="VarChar" Scale="0" Size="50" SourceColumnNullMapping="false" SourceVersion="Current" />
+                </Parameters>
+              </DbCommand>
+            </SelectCommand>
+          </DbSource>
+          <DbSource ConnectionRef="ExampleBaseConnectionString (Settings)" DbObjectName="ExampleBase.dbo.Update_План" DbObjectType="StoredProcedure" GenerateShortCommands="true" GeneratorSourceName="Update_План" MethodsParameterType="CLR" Modifier="Public" Name="Update_План" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy8" UserSourceName="Update_План">
+            <SelectCommand>
+              <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
+                <CommandText>dbo.Update_План</CommandText>
+                <Parameters>
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="ReturnValue" ParameterName="@RETURN_VALUE" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@IdPlan" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@IdMaterial" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="float" DbType="Double" Direction="Input" ParameterName="@Plan" Precision="53" ProviderType="Float" Scale="0" Size="8" SourceColumnNullMapping="false" SourceVersion="Current" />
+                </Parameters>
+              </DbCommand>
+            </SelectCommand>
+          </DbSource>
+        </Sources>
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="ExampleBaseDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="ExampleBaseDataSet" msprop:Generator_UserDSName="ExampleBaseDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="View_Акты" msprop:Generator_TableClassName="View_АктыDataTable" msprop:Generator_TableVarName="tableView_Акты" msprop:Generator_TablePropName="View_Акты" msprop:Generator_RowDeletingName="View_АктыRowDeleting" msprop:Generator_RowChangingName="View_АктыRowChanging" msprop:Generator_RowEvHandlerName="View_АктыRowChangeEventHandler" msprop:Generator_RowDeletedName="View_АктыRowDeleted" msprop:Generator_UserTableName="View_Акты" msprop:Generator_RowChangedName="View_АктыRowChanged" msprop:Generator_RowEvArgName="View_АктыRowChangeEvent" msprop:Generator_RowClassName="View_АктыRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Код_акта" msprop:Generator_ColumnVarNameInTable="columnКод_акта" msprop:Generator_ColumnPropNameInRow="Код_акта" msprop:Generator_ColumnPropNameInTable="Код_актаColumn" msprop:Generator_UserColumnName="Код_акта" type="xs:int" />
+              <xs:element name="Код_материала" msprop:Generator_ColumnVarNameInTable="columnКод_материала" msprop:Generator_ColumnPropNameInRow="Код_материала" msprop:Generator_ColumnPropNameInTable="Код_материалаColumn" msprop:Generator_UserColumnName="Код_материала" type="xs:int" minOccurs="0" />
+              <xs:element name="Наименование" msprop:Generator_ColumnVarNameInTable="columnНаименование" msprop:Generator_ColumnPropNameInRow="Наименование" msprop:Generator_ColumnPropNameInTable="НаименованиеColumn" msprop:Generator_UserColumnName="Наименование" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Получатель" msprop:Generator_ColumnVarNameInTable="columnПолучатель" msprop:Generator_ColumnPropNameInRow="Получатель" msprop:Generator_ColumnPropNameInTable="ПолучательColumn" msprop:Generator_UserColumnName="Получатель" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Первоначальная_стоимость" msprop:Generator_ColumnVarNameInTable="columnПервоначальная_стоимость" msprop:Generator_ColumnPropNameInRow="Первоначальная_стоимость" msprop:Generator_ColumnPropNameInTable="Первоначальная_стоимостьColumn" msprop:Generator_UserColumnName="Первоначальная_стоимость" type="xs:double" minOccurs="0" />
+              <xs:element name="Фактический_износ" msprop:Generator_ColumnVarNameInTable="columnФактический_износ" msprop:Generator_ColumnPropNameInRow="Фактический_износ" msprop:Generator_ColumnPropNameInTable="Фактический_износColumn" msprop:Generator_UserColumnName="Фактический_износ" type="xs:double" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="View_Ведомость" msprop:Generator_TableClassName="View_ВедомостьDataTable" msprop:Generator_TableVarName="tableView_Ведомость" msprop:Generator_TablePropName="View_Ведомость" msprop:Generator_RowDeletingName="View_ВедомостьRowDeleting" msprop:Generator_RowChangingName="View_ВедомостьRowChanging" msprop:Generator_RowEvHandlerName="View_ВедомостьRowChangeEventHandler" msprop:Generator_RowDeletedName="View_ВедомостьRowDeleted" msprop:Generator_UserTableName="View_Ведомость" msprop:Generator_RowChangedName="View_ВедомостьRowChanged" msprop:Generator_RowEvArgName="View_ВедомостьRowChangeEvent" msprop:Generator_RowClassName="View_ВедомостьRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Код_марки" msprop:Generator_ColumnVarNameInTable="columnКод_марки" msprop:Generator_ColumnPropNameInRow="Код_марки" msprop:Generator_ColumnPropNameInTable="Код_маркиColumn" msprop:Generator_UserColumnName="Код_марки" type="xs:int" />
+              <xs:element name="Наименование" msprop:Generator_ColumnVarNameInTable="columnНаименование" msprop:Generator_ColumnPropNameInRow="Наименование" msprop:Generator_ColumnPropNameInTable="НаименованиеColumn" msprop:Generator_UserColumnName="Наименование" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Первоначальная_стоимость" msprop:Generator_ColumnVarNameInTable="columnПервоначальная_стоимость" msprop:Generator_ColumnPropNameInRow="Первоначальная_стоимость" msprop:Generator_ColumnPropNameInTable="Первоначальная_стоимостьColumn" msprop:Generator_UserColumnName="Первоначальная_стоимость" type="xs:double" minOccurs="0" />
+              <xs:element name="Фактический_износ" msprop:Generator_ColumnVarNameInTable="columnФактический_износ" msprop:Generator_ColumnPropNameInRow="Фактический_износ" msprop:Generator_ColumnPropNameInTable="Фактический_износColumn" msprop:Generator_UserColumnName="Фактический_износ" type="xs:double" minOccurs="0" />
+              <xs:element name="Плановый_износ" msprop:Generator_ColumnVarNameInTable="columnПлановый_износ" msprop:Generator_ColumnPropNameInRow="Плановый_износ" msprop:Generator_ColumnPropNameInTable="Плановый_износColumn" msprop:Generator_UserColumnName="Плановый_износ" type="xs:double" minOccurs="0" />
+              <xs:element name="Сумма_отчислений_факт" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnСумма_отчислений_факт" msprop:Generator_ColumnPropNameInRow="Сумма_отчислений_факт" msprop:Generator_ColumnPropNameInTable="Сумма_отчислений_фактColumn" msprop:Generator_UserColumnName="Сумма_отчислений_факт" type="xs:double" minOccurs="0" />
+              <xs:element name="Сумма_отчислений_план" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnСумма_отчислений_план" msprop:Generator_ColumnPropNameInRow="Сумма_отчислений_план" msprop:Generator_ColumnPropNameInTable="Сумма_отчислений_планColumn" msprop:Generator_UserColumnName="Сумма_отчислений_план" type="xs:double" minOccurs="0" />
+              <xs:element name="Отклонение" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnОтклонение" msprop:Generator_ColumnPropNameInRow="Отклонение" msprop:Generator_ColumnPropNameInTable="ОтклонениеColumn" msprop:Generator_UserColumnName="Отклонение" type="xs:double" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="View_Материалы" msprop:Generator_TableClassName="View_МатериалыDataTable" msprop:Generator_TableVarName="tableView_Материалы" msprop:Generator_TablePropName="View_Материалы" msprop:Generator_RowDeletingName="View_МатериалыRowDeleting" msprop:Generator_RowChangingName="View_МатериалыRowChanging" msprop:Generator_RowEvHandlerName="View_МатериалыRowChangeEventHandler" msprop:Generator_RowDeletedName="View_МатериалыRowDeleted" msprop:Generator_UserTableName="View_Материалы" msprop:Generator_RowChangedName="View_МатериалыRowChanged" msprop:Generator_RowEvArgName="View_МатериалыRowChangeEvent" msprop:Generator_RowClassName="View_МатериалыRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Код_марки" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnКод_марки" msprop:Generator_ColumnPropNameInRow="Код_марки" msprop:Generator_ColumnPropNameInTable="Код_маркиColumn" msprop:Generator_UserColumnName="Код_марки" type="xs:int" />
+              <xs:element name="Наименование" msprop:Generator_ColumnVarNameInTable="columnНаименование" msprop:Generator_ColumnPropNameInRow="Наименование" msprop:Generator_ColumnPropNameInTable="НаименованиеColumn" msprop:Generator_UserColumnName="Наименование" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="View_План" msprop:Generator_TableClassName="View_ПланDataTable" msprop:Generator_TableVarName="tableView_План" msprop:Generator_TablePropName="View_План" msprop:Generator_RowDeletingName="View_ПланRowDeleting" msprop:Generator_RowChangingName="View_ПланRowChanging" msprop:Generator_RowEvHandlerName="View_ПланRowChangeEventHandler" msprop:Generator_RowDeletedName="View_ПланRowDeleted" msprop:Generator_UserTableName="View_План" msprop:Generator_RowChangedName="View_ПланRowChanged" msprop:Generator_RowEvArgName="View_ПланRowChangeEvent" msprop:Generator_RowClassName="View_ПланRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Код_плана" msprop:Generator_ColumnVarNameInTable="columnКод_плана" msprop:Generator_ColumnPropNameInRow="Код_плана" msprop:Generator_ColumnPropNameInTable="Код_планаColumn" msprop:Generator_UserColumnName="Код_плана" type="xs:int" />
+              <xs:element name="Код_материала" msprop:Generator_ColumnVarNameInTable="columnКод_материала" msprop:Generator_ColumnPropNameInRow="Код_материала" msprop:Generator_ColumnPropNameInTable="Код_материалаColumn" msprop:Generator_UserColumnName="Код_материала" type="xs:int" minOccurs="0" />
+              <xs:element name="Наименование" msprop:Generator_ColumnVarNameInTable="columnНаименование" msprop:Generator_ColumnPropNameInRow="Наименование" msprop:Generator_ColumnPropNameInTable="НаименованиеColumn" msprop:Generator_UserColumnName="Наименование" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Плановый_износ" msprop:Generator_ColumnVarNameInTable="columnПлановый_износ" msprop:Generator_ColumnPropNameInRow="Плановый_износ" msprop:Generator_ColumnPropNameInTable="Плановый_износColumn" msprop:Generator_UserColumnName="Плановый_износ" type="xs:double" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="View_РасчетСуммыАмортОтчислений" msprop:Generator_TableClassName="View_РасчетСуммыАмортОтчисленийDataTable" msprop:Generator_TableVarName="tableView_РасчетСуммыАмортОтчислений" msprop:Generator_TablePropName="View_РасчетСуммыАмортОтчислений" msprop:Generator_RowDeletingName="View_РасчетСуммыАмортОтчисленийRowDeleting" msprop:Generator_RowChangingName="View_РасчетСуммыАмортОтчисленийRowChanging" msprop:Generator_RowEvHandlerName="View_РасчетСуммыАмортОтчисленийRowChangeEventHandler" msprop:Generator_RowDeletedName="View_РасчетСуммыАмортОтчисленийRowDeleted" msprop:Generator_UserTableName="View_РасчетСуммыАмортОтчислений" msprop:Generator_RowChangedName="View_РасчетСуммыАмортОтчисленийRowChanged" msprop:Generator_RowEvArgName="View_РасчетСуммыАмортОтчисленийRowChangeEvent" msprop:Generator_RowClassName="View_РасчетСуммыАмортОтчисленийRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Код_марки" msprop:Generator_ColumnVarNameInTable="columnКод_марки" msprop:Generator_ColumnPropNameInRow="Код_марки" msprop:Generator_ColumnPropNameInTable="Код_маркиColumn" msprop:Generator_UserColumnName="Код_марки" type="xs:int" />
+              <xs:element name="Наименование" msprop:Generator_ColumnVarNameInTable="columnНаименование" msprop:Generator_ColumnPropNameInRow="Наименование" msprop:Generator_ColumnPropNameInTable="НаименованиеColumn" msprop:Generator_UserColumnName="Наименование" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Первоначальная_стоимость" msprop:Generator_ColumnVarNameInTable="columnПервоначальная_стоимость" msprop:Generator_ColumnPropNameInRow="Первоначальная_стоимость" msprop:Generator_ColumnPropNameInTable="Первоначальная_стоимостьColumn" msprop:Generator_UserColumnName="Первоначальная_стоимость" type="xs:double" minOccurs="0" />
+              <xs:element name="Фактический_износ" msprop:Generator_ColumnVarNameInTable="columnФактический_износ" msprop:Generator_ColumnPropNameInRow="Фактический_износ" msprop:Generator_ColumnPropNameInTable="Фактический_износColumn" msprop:Generator_UserColumnName="Фактический_износ" type="xs:double" minOccurs="0" />
+              <xs:element name="Сумма_отчислений_факт" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnСумма_отчислений_факт" msprop:Generator_ColumnPropNameInRow="Сумма_отчислений_факт" msprop:Generator_ColumnPropNameInTable="Сумма_отчислений_фактColumn" msprop:Generator_UserColumnName="Сумма_отчислений_факт" type="xs:double" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:View_Акты" />
+      <xs:field xpath="mstns:Код_акта" />
+    </xs:unique>
+    <xs:unique name="View_Ведомость_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:View_Ведомость" />
+      <xs:field xpath="mstns:Код_марки" />
+    </xs:unique>
+    <xs:unique name="View_Материалы_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:View_Материалы" />
+      <xs:field xpath="mstns:Код_марки" />
+    </xs:unique>
+    <xs:unique name="View_План_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:View_План" />
+      <xs:field xpath="mstns:Код_плана" />
+    </xs:unique>
+    <xs:unique name="View_РасчетСуммыАмортОтчислений_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:View_РасчетСуммыАмортОтчислений" />
+      <xs:field xpath="mstns:Код_марки" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>
