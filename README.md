@@ -65,3 +65,76 @@ FROM     dbo.Акты INNER JOIN  <br>
                   dbo.МатериальныеЦенности ON dbo.Акты.Код_материала = dbo.МатериальныеЦенности.Код_марки INNER JOIN  <br>
                   dbo.План ON dbo.МатериальныеЦенности.Код_марки = dbo.План.Код_материала  <br>
 </details>
+
+### Для фильтрации данных в таблице
+
+<details><summary>Вызов функции фильтра</summary>
+bool result = MainForm.RunFilter(MainForm.Имя_биндинг_соурса, Текстовое_поле_фильтра.Text, По_какому_полю_сортировка.Text); <br>
+if (!result) <br>
+{ <br>
+&emsp;	MessageBox.Show("Ошибка запроса"); <br>
+} <br>
+</details>
+
+<details><summary>Реализация функции</summary>
+public bool RunFilter(BindingSource binding, string value, string field)//биндинг, значение фильтра, поле для фильтрации <br>
+&emsp;{//задать фильтр таблице <br>
+&emsp;&emsp;try <br>
+&emsp;&emsp;&emsp;{ <br>
+&emsp;&emsp;&emsp;if (value == "" && field == "") <br>
+&emsp;&emsp;&emsp;{//если поле и значение не указано <br>
+&emsp;&emsp;&emsp;&emsp;binding.Filter = "";//присваиваем пустой фильтр <br>
+&emsp;&emsp;&emsp;&emsp;return true;//фильтр сработал, возвращаем <br>
+&emsp;&emsp;&emsp;} <br>
+&emsp;&emsp;&emsp;if (int.TryParse(value, out _)) <br>
+&emsp;&emsp;&emsp;{//если число <br>
+&emsp;&emsp;&emsp;&emsp;binding.Filter = String.Format("[{0}] = {1}", field, value); <br>
+&emsp;&emsp;&emsp;} <br>
+&emsp;&emsp;&emsp;else <br>
+&emsp;&emsp;&emsp;{//если пользователь использует знаки <br>
+&emsp;&emsp;&emsp;&emsp;if (value[0] == '<' || value[0] == '>' || value[0] == '=') <br>
+&emsp;&emsp;&emsp;{ <br>
+&emsp;&emsp;&emsp;&emsp;if ((int.TryParse(value.Substring(1), out _)) || (value[1] == '=' && int.TryParse(value.Substring(2), out _))) <br>
+&emsp;&emsp;&emsp;&emsp; {//для чисел <br>
+&emsp;&emsp;&emsp;&emsp;binding.Filter = String.Format("[{0}] {1}", field, value); <br>
+&emsp;&emsp;&emsp;&emsp;} <br>
+&emsp;&emsp;&emsp;&emsp; else if (DateTime.TryParse(value.Substring(1), out _)) <br>
+&emsp;&emsp;&emsp;&emsp;{//если знак однозначный для даты <br>
+&emsp;&emsp;&emsp;&emsp;&emsp;char mark = value[0]; <br>
+&emsp;&emsp;&emsp;&emsp;&emsp;value = Convert.ToDateTime(value.Substring(1)).ToString().Replace('.', '-'); <br>
+&emsp;&emsp;&emsp;&emsp;&emsp;binding.Filter = String.Format("[{0}] {1}'{2}'", field, mark, value); <br>
+&emsp;&emsp;&emsp;&emsp;} <br>
+&emsp;&emsp;&emsp;&emsp;else if (value[1] == '=' && DateTime.TryParse(value.Substring(2), out _)) <br>
+&emsp;&emsp;&emsp;&emsp;{//если знак из двух знаков для даты <br>
+&emsp;&emsp;&emsp;&emsp;&emsp;string mark = value.Substring(0, 2); <br>
+&emsp;&emsp;&emsp;&emsp;&emsp; //конвертируем дату, так как для сравнения формат даты немного другой <br>
+&emsp;&emsp;&emsp;&emsp;&emsp;value = Convert.ToDateTime(value.Substring(2)).ToString().Replace('.', '-'); <br>
+&emsp;&emsp;&emsp;&emsp;&emsp;binding.Filter = String.Format("[{0}] {1}'{2}'", field, mark, value); <br>
+&emsp;&emsp;&emsp;&emsp;} <br>
+&emsp;&emsp;&emsp;} <br>
+&emsp;&emsp;&emsp;else <br>
+&emsp;&emsp;&emsp;{//для строк <br>
+&emsp;&emsp;&emsp;&emsp;if (value[value.Length - 1] == '*') <br>
+&emsp;&emsp;&emsp;&emsp;{//если есть звездочка <br>
+&emsp;&emsp;&emsp;&emsp;&emsp;binding.Filter = String.Format("[{0}] like '{1}'", field, value); <br>
+&emsp;&emsp;&emsp;&emsp;} <br>
+&emsp;&emsp;&emsp;&emsp;else if (DateTime.TryParse(value, out _)) <br>
+&emsp;&emsp;&emsp;&emsp;{//если дата без знаков <br>
+&emsp;&emsp;&emsp;&emsp;&emsp;//конвертируем дату, так как для сравнения формат даты немного другой <br>
+&emsp;&emsp;&emsp;&emsp;&emsp;value = Convert.ToDateTime(value).ToString().Replace('.', '-'); <br>
+&emsp;&emsp;&emsp;&emsp;&emsp;binding.Filter = String.Format("[{0}] = '{1}'", field, value); <br>
+&emsp;&emsp;&emsp;&emsp;} <br>
+&emsp;&emsp;&emsp;&emsp;else <br>
+&emsp;&emsp;&emsp;&emsp;{//если строка без звездочки <br>
+&emsp;&emsp;&emsp;&emsp;&emsp;binding.Filter = String.Format("[{0}] like '{1}*'", field, value); <br>
+&emsp;&emsp;&emsp;&emsp;} <br>
+&emsp;&emsp;&emsp;} <br>
+&emsp;&emsp;&emsp;} <br>
+&emsp;&emsp;&emsp;return true; <br>
+&emsp;&emsp;&emsp;} <br>
+&emsp;&emsp;&emsp;catch <br>
+&emsp;&emsp;&emsp;{ <br>
+&emsp;&emsp;&emsp;&emsp;return false; <br>
+&emsp;&emsp;&emsp;} <br>
+&emsp;&emsp;} <br>
+</details>
